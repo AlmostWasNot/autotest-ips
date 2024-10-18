@@ -9,6 +9,8 @@ class MainPage extends PageObject {
     public isDisplayedUserLogin(): Promise<boolean> {
         return this.getUserLogin().isDisplayed()
     }
+
+
 }
 
 export {

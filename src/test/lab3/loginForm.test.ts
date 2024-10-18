@@ -1,4 +1,4 @@
-import { auth } from "../../secrets/password"
+import { auth } from "../../secrets/credentials"
 
 describe('Login form', () => {
     beforeEach(async () => {
@@ -25,7 +25,7 @@ describe('Login form', () => {
         })
         await browser.$('//*[@type="submit"]').click()
 
-        const itDisplayedElement: boolean = await (await browser.$('//form[@action="sessions/verifyed-device"] | //*//*[@data-login="AlmostWasNot"]')).isDisplayed()
+        const itDisplayedElement: boolean = await (await browser.$('//form[@action="sessions/verifyed-device"] | //*[@data-login="AlmostWasNot"]')).isDisplayed()
 
         expect(itDisplayedElement).toEqual(true)
     })

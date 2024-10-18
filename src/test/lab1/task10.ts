@@ -11,6 +11,6 @@ function printSec(start: number, stop: number) {
     }, 1000);
 };
 
-printSec(1, 5)
+printSec(1, 10)
 
 //использовать рекурсию
