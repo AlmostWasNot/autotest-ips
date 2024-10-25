@@ -9,7 +9,7 @@ class Car {
         this.engineStatus = true
     }
 
-    public getState(): void {
+    public getState(): string {
         let str: string = ''
         if (this.engineStatus == false) {
             str = 'Engine avto: off'

@@ -1,17 +1,17 @@
 class Car {
-    engineStatus: boolean = false
-    engineStatusOff: string = 'Engine avto: off'
-    engineStatusOn: string = 'Engine avto: off'
+    public engineStatus: boolean = false
+    private engineStatusOff: string = 'Engine avto: off'
+    private engineStatusOn: string = 'Engine avto: off'
 
-    turnOff() {
+    public turnOff() {
         this.engineStatus = false
     }
 
-    turnOn() {
+    public turnOn() {
         this.engineStatus = true
     }
 
-    getState(): void {
+    public getState(): string {
         let str: string = ''
         if (this.engineStatus == false) {
             str = 'Engine avto: off'
@@ -21,7 +21,7 @@ class Car {
         return str
     }
 
-    setSpeed(speed: number) {
+    public setSpeed(speed: number) {
         if ((speed < 0) || (speed > 100))
             console.log('error')
         else {
